@@ -1,0 +1,11 @@
+curl
+flatpak
+git
+preload
+python-pip3
+stacer
+tlp
+tlp-rdw
+wget
+xdotool
+zsh

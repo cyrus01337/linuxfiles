@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
-# ./prerequisites.sh
+./prerequisites.sh
 
 # cp -r bin/ ~
 
 for script in ./applications/*; do
     $script
 done
+
+./zsh.sh
