@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+eval $(xdotool getwindowfocus getwindowgeometry --shell)
+OFFSET=$(xwininfo -id $(xdotool getactivewindow) | grep "Corners" | sed -rn "s/^[a-zA-Z :]+([+0-9-]+).+$/\1/p")
+REGION="${WIDTH}x$HEIGHT$OFFSET"
+
+flatpak run org.flameshot.Flameshot gui -s -c --region $REGION

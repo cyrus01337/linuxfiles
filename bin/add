@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+OPTION=${1,,}
+ARGS="${@:2}"
+command="git clone"
+directory=""
+
+case $OPTION in
+    plugin | plugins)
+        directory="~/Desktop/third-party/powercord/src/Powercord/plugins"
+        ;;
+
+    project | projects)
+        directory="~/Desktop/projects"
+        ;;
+
+    theme | themes)
+        directory="~/Desktop/third-party/powercord/src/Powercord/themes"
+        ;;
+
+    third-party | 3rd-party)
+        directory="~/Desktop/third-party"
+        ;;
+
+    *)
+        echo "$OPTION is not a valid option"
+        exit 1
+        ;;
+esac
+
+for repo in $ARGS; do
+    basename_with_extension=$(basename $repo)
+    basename="${basename_with_extension/.git/}"
+
+    echo $directory
+    eval "$command $repo $directory/$basename"
+done

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+APPLICATION=$1
+
+if pgrep $APPLICATION; then
+    wmctrl -xa $APPLICATION
+else
+    $APPLICATION &> /dev/null &
+fi
+
+exit 0
