@@ -1,0 +1,13 @@
+curl
+flatpak
+fonts-powerline
+git
+preload
+python3-pip
+stacer
+tlp
+tlp-rdw
+wget
+wine
+xdotool
+zsh

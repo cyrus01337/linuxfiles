@@ -1,0 +1,4 @@
+latte-dock
+tmux
+ubuntu-restricted-extras
+winetricks
