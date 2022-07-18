@@ -1,10 +1,21 @@
 #!/usr/bin/env bash
+DEBIAN_FRONTEND=noninteractive
+ORIGINAL_DIRECTORY=$PWD
+RUNZSH=no
+
 ./prerequisites.sh
 
-# cp -r bin/ ~
+ln -s ./bin ~/bin
+cp -r bin/ ~
+./user.sh
 
 for script in ./applications/*; do
+    cd $ORIGINAL_DIRECTORY
+
     $script
 done
+
+sudo apt-fast upgrade -y
+sudo apt-fast dist-upgrade -y
 
 ./zsh.sh
