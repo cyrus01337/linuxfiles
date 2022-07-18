@@ -1,5 +1,5 @@
+Download & extract ZIP, `cd` into new directory (or don't if you extracted the contents like a maniac) and run:
 ```sh
-git clone https://github.com/cyrus01337/linuxfiles.git
-cd linuxfiles
 sudo ./install
 ```
+That's it.
