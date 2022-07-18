@@ -1,0 +1,4 @@
+./bin ~
+./config/.nanorc ~
+./config/.zshrc ~
+./config/archey4 ~/.config/
