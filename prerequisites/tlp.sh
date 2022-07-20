@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-tlp start
+sudo tlp start

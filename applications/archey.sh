@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-pip3 install -y archey4
+pip3 install archey4
