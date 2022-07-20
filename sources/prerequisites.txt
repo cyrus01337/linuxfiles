@@ -1,10 +1,13 @@
+apt-transport-https
 curl
 flatpak
 fonts-powerline
 git
+gpg
 preload
 python3-pip
 stacer
+snapd
 tlp
 tlp-rdw
 wget
