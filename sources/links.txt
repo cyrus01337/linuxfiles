@@ -1,4 +1,5 @@
 ./bin ~
 ./config/.nanorc ~
 ./config/.zshrc ~
+./config/.tmux.conf ~
 ./config/archey4 ~/.config/
