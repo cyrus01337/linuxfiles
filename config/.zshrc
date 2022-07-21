@@ -1,3 +1,5 @@
+XDG_DATA_DIRS="/var/lib/flatpak/exports/share"
+XDG_DATA_HOME="/var/lib/flatpak/exports/share"
 ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
@@ -120,7 +122,7 @@ alias idle="keep-presence -cs 1 -p 100"
 alias snapi="sudo snap install $@"
 alias snapr="sudo snap remove $@"
 alias ssh="xxh $@ +s zsh"
-alias ssh-keygen="ssh-keygen $@ -t rsa -b 2048 -N "" -f ~/.ssh/passwordless"
+alias ssh-keygen="ssh-keygen -t rsa -b 2048 -N '' $@"
 # alias mixer="alsamixer"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
