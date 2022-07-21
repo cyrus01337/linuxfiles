@@ -1,3 +1,4 @@
+WINE_PREFIX="/home/cyrus/.local/share/grapejuice/prefixes/studio"
 XDG_DATA_DIRS="/var/lib/flatpak/exports/share"
 XDG_DATA_HOME="/var/lib/flatpak/exports/share"
 ZSH_TMUX_AUTOCONNECT=false
