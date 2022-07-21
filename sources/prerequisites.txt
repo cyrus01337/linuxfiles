@@ -1,5 +1,7 @@
 apt-transport-https
+build-essential
 curl
+file-roller
 flatpak
 fonts-powerline
 git
@@ -12,6 +14,6 @@ snapd
 tlp
 tlp-rdw
 wget
-wine
+winetricks
 xdotool
 zsh

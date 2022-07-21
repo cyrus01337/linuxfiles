@@ -1,6 +1,9 @@
 curl
+ffmpeg
 flatpak
+font-manager
 git
+postgresql
 preload
 python-pip3
 stacer
@@ -8,4 +11,5 @@ tlp
 tlp-rdw
 wget
 xdotool
+youtube-dl
 zsh
