@@ -47,7 +47,7 @@
 		},
 		{
 			"type": "Disk",
-			"show_filesystems": ["local"],
+			"show_filesystems": ["/"],
 			"combine_total": true,
 			"disk_labels": null,
 			"hide_entry_name": null,
