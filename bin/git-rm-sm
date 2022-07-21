@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+SUBMODULE="$1"
+
+if [[ ! $SUBMODULE ]]; then
+    exit 1
+fi
+
+mv "$ROOT_DIR/$SUBMODULE" "$ROOT_DIR/${SUBMODULE}_tmp"
+git submodule deinit -f -- $SUBMODULE
+rm -rf "$ROOT_DIR/.git/modules/$SUBMODULE"
+git rm -rf "$SUBMODULE"
