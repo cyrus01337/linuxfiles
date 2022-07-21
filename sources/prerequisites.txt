@@ -6,6 +6,7 @@ git
 gpg
 preload
 python3-pip
+sshpass
 stacer
 snapd
 tlp
