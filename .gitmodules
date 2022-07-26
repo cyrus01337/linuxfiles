@@ -1,0 +1,3 @@
+[submodule "config/xxh-dotfiles"]
+	path = config/xxh-dotfiles
+	url = https://github.com/cyrus01337/xxh-dotfiles.git
