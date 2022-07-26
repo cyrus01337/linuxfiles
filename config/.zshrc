@@ -32,11 +32,11 @@ ZSH_THEME="agnoster"
 
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
+zstyle ':omz:update' frequency 7
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -127,13 +127,19 @@ alias snapr="sudo snap remove $@"
 
 export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 if command -v pyenv &> /dev/null; then
     eval "$(pyenv init -)"
 else
     export PATH="$PYENV_ROOT/bin:$PATH"
+fi
+
+if [[ -s "$NVM_DIR/nvm.sh" ]]; then
+    \. "$NVM_DIR/nvm.sh" # This loads nvm
+fi
+
+if [[ -s "$NVM_DIR/bash_completion" ]]; then
+    \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
 if command -v archey &> /dev/null; then
