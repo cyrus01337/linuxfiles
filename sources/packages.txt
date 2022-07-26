@@ -10,6 +10,7 @@ stacer
 tlp
 tlp-rdw
 wget
+grub-customizer
 xdotool
 youtube-dl
 zsh
