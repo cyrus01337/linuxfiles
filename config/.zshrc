@@ -107,30 +107,29 @@ export EDITOR="nano"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias aptf="sudo apt-fast"
 alias aptfar="aptf autoremove -y $@"
 alias aptfc="aptf clean $@"
 alias aptfdup="aptf dist-upgrade -y $@"
-alias aptf="sudo apt-fast"
 alias aptfi="aptf install -y $@"
 alias aptfp="aptf purge -y $@"
 alias aptfr="aptf remove -y $@"
 alias aptfu="aptf update $@"
 alias aptfup="aptf upgrade -y $@"
+alias auto-ssh-keygen="ssh-keygen -t rsa -b 2048 -N '' $@"
 alias clear="wipeclean"
 alias clip="xclip -r -sel clipboard"
 alias flameshot="flatpak run org.flameshot.Flameshot $@"
-alias idle="keep-presence -cs 1 -p 100"
+alias idle="keep-presence -cs 1 -p 100 &> /dev/null"
+# alias mixer="alsamixer"
 alias snapi="sudo snap install $@"
 alias snapr="sudo snap remove $@"
-alias ssh="xxh $@ +s zsh"
-alias ssh-keygen="ssh-keygen -t rsa -b 2048 -N '' $@"
-# alias mixer="alsamixer"
 
+export PYENV_ROOT="$HOME/.pyenv"
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-export PYENV_ROOT="$HOME/.pyenv"
 if command -v pyenv &> /dev/null; then
     eval "$(pyenv init -)"
 else
