@@ -31,6 +31,4 @@
 hosts:
     ".*":
         +if:
-        +q:
-        +hhh: "~"
         +s: zsh
