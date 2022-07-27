@@ -4,12 +4,15 @@ XDG_DATA_HOME="/var/lib/flatpak/exports/share"
 ZSH_TMUX_AUTOCONNECT=false
 ZSH_TMUX_AUTOSTART=true
 ZSH_TMUX_UNICODE=true
+export PYENV_ROOT="$HOME/.pyenv"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 
 # If you come from bash you might have to change your $PATH.
 export PATH="$PATH:/home/cyrus/.local/bin:/home/cyrus/bin"
+export CY5_MAIN_CONFIG_DIRECTORY="$HOME/Desktop/projects/linuxfiles/config"
 
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$CY5_MAIN_CONFIG_DIRECTORY/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -125,9 +128,6 @@ alias idle="keep-presence -cs 1 -p 100 &> /dev/null"
 alias snapi="sudo snap install $@"
 alias snapr="sudo snap remove $@"
 
-export PYENV_ROOT="$HOME/.pyenv"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-
 if command -v pyenv &> /dev/null; then
     eval "$(pyenv init -)"
 else
@@ -135,7 +135,7 @@ else
 fi
 
 if [[ -s "$NVM_DIR/nvm.sh" ]]; then
-    \. "$NVM_DIR/nvm.sh" # This loads nvm
+    \. "$NVM_DIR/nvm.sh"  # This loads nvm
 fi
 
 if [[ -s "$NVM_DIR/bash_completion" ]]; then

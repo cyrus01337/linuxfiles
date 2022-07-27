@@ -1,3 +1,6 @@
 [submodule "config/xxh-dotfiles"]
 	path = config/xxh-dotfiles
 	url = https://github.com/cyrus01337/xxh-dotfiles.git
+[submodule "config/.oh-my-zsh"]
+	path = config/.oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
